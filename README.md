@@ -19,6 +19,12 @@ Here's how to install this Vim configuration. Assumes Bash shell and a POSIX ope
     git submodule init
     git submodule update
 
+## Update helptags
+
+This is a pathogen goodie. Start Vim, and run
+
+    :Helptags
+
 # Initial Setup
 
 For posterity, here's how I created this repository.
