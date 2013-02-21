@@ -35,6 +35,8 @@ For posterity, here's how I created this repository.
     cd .vim
     git submodule add git://github.com/tpope/vim-pathogen.git bundle/pathogen
 
-Install other plugins. For example, [Gundo](http://sjl.bitbucket.org/gundo.vim/):
+## Install other plugins.
+
+For example, [Gundo](http://sjl.bitbucket.org/gundo.vim/):
 
     git submodule add git://github.com/sjl/gundo.vim.git bundle/gundo
