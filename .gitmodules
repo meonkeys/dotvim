@@ -13,3 +13,6 @@
 [submodule "bundle/gnupg"]
 	path = bundle/gnupg
 	url = git://github.com/jamessan/vim-gnupg.git
+[submodule "bundle/gitgutter"]
+	path = bundle/gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
