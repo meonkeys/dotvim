@@ -104,8 +104,6 @@ map <F8> :call <SID>Swapcolor()<CR>
 nmap gf :split <cfile><CR>
 " throw in the date, ala [ Sun Sep 26 22:41:43 PDT 2004 ]
 nmap <Leader>dt a[<Esc>:r !date<CR>kJ$a ]<Esc>
-" same, but for Mifos daily report emails
-nmap <Leader>dts a<Esc>:r !echo `date +\%Y-\%m-\%d`, not blocked, amm<CR>kJ$<Esc>
 
 " Language-specific settings {{{1
 
