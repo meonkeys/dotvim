@@ -14,10 +14,8 @@ Here's how to install this Vim configuration. Assumes Bash shell and a POSIX ope
 
 ## Install Adam's Vim Setup
 
-    git clone git://github.com/meonkeys/dotvim.git .vim
+    git clone --recursive git://github.com/meonkeys/dotvim.git .vim
     cd .vim
-    git submodule init
-    git submodule update
 
 ## Update helptags
 
