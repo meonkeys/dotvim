@@ -1,6 +1,6 @@
 # Adam's Vim Setup
 
-My "dot vim" (`~/.vim`) dir.
+My "dot vim" (`~/.vim`) dir. For a list of plugins, examine `.gitmodules`.
 
 # Install
 
