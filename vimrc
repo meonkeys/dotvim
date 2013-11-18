@@ -256,8 +256,8 @@ function s:PhpPrgSettings()
     iab pdd ?><pre><?php print_r() ?></pre><?php <Esc>15hi
     iab udd <pre><?php print_r() ?></pre><Esc>9hi
     set indentexpr=
-    set shiftwidth=2
-    set tabstop=2
+    set shiftwidth=4
+    set tabstop=4
     set autoindent
     set smartindent
     set keywordprg=php_doc
