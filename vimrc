@@ -146,6 +146,7 @@ au FileType tags set noexpandtab nosmarttab
 au BufNewFile,BufRead ~/.gvfs/* set noswapfile
 au BufNewFile,BufRead */bv-secrets/pwd* set noexpandtab nosmarttab
 au BufNewFile,BufRead /var/log/apache* setfiletype apachelog
+au BufNewFile,BufRead /etc/my.cnf setfiletype dosini
 au BufNewFile,BufRead *.twig setfiletype twig
 au BufNewFile,BufRead deps setfiletype dosini
 
