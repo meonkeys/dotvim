@@ -1,7 +1,14 @@
 " General options {{{1
 
-filetype plugin indent on
-syntax on
+set nocompatible
+filetype off " required by Vundle
+
+" set up Vundle
+set runtimepath+=~/.vim/bundle/vundle/
+call vundle#rc()
+Plugin 'gmarik/vundle'
+
+filetype plugin indent on " required by Vundle
 
 " These are in alphabetical order, except that the characters 'no' are ignored
 " if they appear at the beginning of an option name.

@@ -1,10 +1,11 @@
 # Adam's Vim Setup
 
-My "dot vim" (`~/.vim`) dir. For a list of plugins, examine `.gitmodules`.
+My "dot vim" (`~/.vim`) dir.
 
 # Install
 
-Here's how to install this Vim configuration. Assumes Bash shell and a POSIX operating system.
+Here's how to install this Vim configuration. Assumes Bash shell and a POSIX
+operating system.
 
 ## Replace existing Vim configuration
 
@@ -14,33 +15,19 @@ Here's how to install this Vim configuration. Assumes Bash shell and a POSIX ope
 
 ## Install Adam's Vim Setup
 
-    git clone --recursive git://github.com/meonkeys/dotvim.git .vim
+    git clone https://github.com/meonkeys/dotvim.git .vim
     cd .vim
 
-## Update helptags
+## Install Vundle
 
-This is a pathogen goodie. Start Vim, and run
+Plugins are managed with Vundle. Install Vundle:
 
-    :Helptags
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-# Initial Setup
+## Install Plugins
 
-For posterity, here's how I created this repository.
+Start Vim and run `:PluginInstall`. Done!
 
-## Replace existing Vim configuration
-
-    cd ~
-    mv .vim .vimrc /tmp
-    ln -s ~/.vim/vimrc .vimrc
-
-## Install [pathogen](https://github.com/tpope/vim-pathogen)
-
-    mkdir -p .vim/bundle
-    cd .vim
-    git submodule add git://github.com/tpope/vim-pathogen.git bundle/pathogen
-
-## Install other plugins.
-
-For example, [Gundo](http://sjl.bitbucket.org/gundo.vim/):
-
-    git submodule add git://github.com/sjl/gundo.vim.git bundle/gundo
+Plugins are enumerated in `vimrc`. See the vundle documentation in `:help
+vundle` or [online](https://github.com/gmarik/Vundle.vim) for further
+instructions.
