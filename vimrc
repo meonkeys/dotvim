@@ -8,6 +8,16 @@ set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 Plugin 'gmarik/vundle'
 
+" Vundle-managed plugins
+Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'honza/vim-snippets'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'vimoutliner/vimoutliner'
+
 filetype plugin indent on " required by Vundle
 
 " These are in alphabetical order, except that the characters 'no' are ignored
