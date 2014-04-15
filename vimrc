@@ -497,13 +497,8 @@ endfunction
 
 " UltiSnips {{{2
 
-let g:UltiSnipsListSnippets="<c-l>"
-
-" From UltiSnips manual. This overrides the default jump forward trigger to
-" provide an experience more like TextMate. NOTE: conflicts with supertab.
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-j>"
-let g:UltiSnipsEditSplit="horizontal"
+" avoids conflict with YouCompleteMe
+let g:UltiSnipsExpandTrigger="<c-j>"
 
 " gnupg.vim {{{2
 let g:GPGPreferSign=1
