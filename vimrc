@@ -17,6 +17,9 @@ Plugin 'jamessan/vim-gnupg'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
+
+" Fix leader for VimOutliner files. Not sure why this is necessary.
+let maplocalleader=",,"
 Plugin 'vimoutliner/vimoutliner'
 
 filetype plugin indent on " required by Vundle
@@ -234,6 +237,10 @@ autocmd BufRead,BufNewFile *.otl call <SID>VimOutlinerSettings()
 function s:VimOutlinerSettings()
     set filetype=vo_base
     set foldcolumn=0
+    " Work around Vundle or whatever breaks VimOutliner stuff.
+    source $HOME/.vim/bundle/vimoutliner/ftdetect/votl.vim
+    source $HOME/.vim/bundle/vimoutliner/ftplugin/votl.vim
+    source $HOME/.vim/bundle/vimoutliner/syntax/votl.vim
 endfunction
 autocmd FileType vo_base highlight Folded ctermfg=4
 
