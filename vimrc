@@ -506,7 +506,9 @@ endfunction
 " UltiSnips {{{2
 
 " avoids conflict with YouCompleteMe
-let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 " gnupg.vim {{{2
 let g:GPGPreferSign=1
