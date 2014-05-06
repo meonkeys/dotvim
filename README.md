@@ -31,3 +31,20 @@ Start Vim and run `:PluginInstall`. Done!
 Plugins are enumerated in `vimrc`. See the vundle documentation in `:help
 vundle` or [online](https://github.com/gmarik/Vundle.vim) for further
 instructions.
+
+## Misc Plugin Notes
+
+Some plugins require extra setup.
+
+### YouCompleteMe
+
+    mkdir /tmp/ycm_build && cd /tmp/ycm_build
+    cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON . ~/.vim/bundle/YouCompleteMe/cpp
+    make ycm_support_libs
+
+### Command-T
+
+    sudo apt-get install ruby1.9.1-dev
+    cd ~/.vim/bundle/Command-T/ruby/command-t/
+    ruby extconf.rb
+    make
