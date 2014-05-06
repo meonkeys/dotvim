@@ -21,6 +21,7 @@ Plugin 'sjl/gundo.vim'
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
 Plugin 'vimoutliner/vimoutliner'
+Plugin 'wincent/Command-T'
 
 filetype plugin indent on " required by Vundle
 
