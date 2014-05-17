@@ -38,9 +38,8 @@ Some plugins require extra setup.
 
 ### YouCompleteMe
 
-    mkdir /tmp/ycm_build && cd /tmp/ycm_build
-    cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON . ~/.vim/bundle/YouCompleteMe/cpp
-    make ycm_support_libs
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.sh --clang-completer
 
 ### Command-T
 
