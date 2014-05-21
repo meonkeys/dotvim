@@ -522,6 +522,9 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
     runtime! macros/matchit.vim
 endif
 
+" Command-T {{{2
+let g:CommandTNeverShowDotFiles=1
+
 " Miscellaneous {{{1
 
 " see ':he last-position-jump'
