@@ -479,7 +479,8 @@ endfunction
 autocmd BufNewFile,BufRead *.md,*.mkd set filetype=markdown
 autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
-    set makeprg=markdown\ %\ >\ /tmp/out.html
+    set makeprg=beautify\ %\ >\ /tmp/out.html
+    autocmd BufWritePost *.md silent make
     set shiftwidth=2
     set tabstop=2
     set conceallevel=0
