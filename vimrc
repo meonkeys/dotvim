@@ -503,6 +503,11 @@ function s:BindZoneSettings()
     autocmd BufWritePre /etc/bind/db.* call <SID>ReplaceBindZoneSerialLine()
 endfunction
 
+" Meteor projects
+if (getftype('.meteor') == 'dir')
+    set wildignore=packages/**
+endif
+
 " Addons installed elsewhere {{{1
 
 " UltiSnips {{{2
