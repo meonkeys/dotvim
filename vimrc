@@ -530,6 +530,8 @@ endif
 
 " Command-T {{{2
 let g:CommandTNeverShowDotFiles=1
+noremap <silent> <leader>b :CommandTMRU<CR>
+noremap <silent> <leader>j :CommandTJump<CR>
 
 " Miscellaneous {{{1
 
