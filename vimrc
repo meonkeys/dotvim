@@ -17,6 +17,7 @@ Plugin 'jamessan/vim-gnupg'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
+Plugin 'elzr/vim-json'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
