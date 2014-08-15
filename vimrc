@@ -1,4 +1,4 @@
-" General options {{{1
+" Init / Plugins {{{1
 
 set nocompatible
 filetype off " required by Vundle
@@ -18,6 +18,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'elzr/vim-json'
+
+" General options {{{1
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
