@@ -18,6 +18,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'elzr/vim-json'
+Plugin 'Slava/vim-spacebars'
 
 " General options {{{1
 
