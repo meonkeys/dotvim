@@ -75,6 +75,7 @@ set printoptions=paper:letter,duplex:off,number:n,left:10mm,portrait:y
 " good settings for XML
 "set printoptions=paper:letter,duplex:off,number:n,left:10mm,portrait:n,header:0
 set ruler
+set shiftround
 set showcmd        " display incomplete commands
 set showfulltag    " show prototype when completing words using tags file
 set showmatch
