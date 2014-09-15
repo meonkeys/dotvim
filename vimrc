@@ -19,6 +19,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'sjl/gundo.vim'
 Plugin 'elzr/vim-json'
 Plugin 'Slava/vim-spacebars'
+Plugin 'marijnh/tern_for_vim'
 
 " General options {{{1
 
