@@ -204,7 +204,7 @@ function s:CProgSettings()
           find %:t:r.c
       endif
   endfunction
-  nmap ,s :call <SID>SwitchSourceHeader()<CR> 
+  nmap ,s :call <SID>SwitchSourceHeader()<CR>
   let g:loaded_prog_settings = 1
 endfunction
 " for some reason this must be outside of CProgSettings()
@@ -229,7 +229,7 @@ function s:CppProgSettings()
             find %:t:r.cpp
         endif
     endfunction
-    nmap ,s :call <SID>SwitchSourceHeader()<CR> 
+    nmap ,s :call <SID>SwitchSourceHeader()<CR>
     let g:loaded_prog_settings = 1
 endfunction
 
