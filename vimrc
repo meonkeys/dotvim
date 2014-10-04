@@ -20,6 +20,8 @@ Plugin 'sjl/gundo.vim'
 Plugin 'elzr/vim-json'
 Plugin 'Slava/vim-spacebars'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
 
 " General options {{{1
 
@@ -538,6 +540,11 @@ endif
 let g:CommandTNeverShowDotFiles=1
 noremap <silent> <leader>b :CommandTMRU<CR>
 noremap <silent> <leader>j :CommandTJump<CR>
+
+" Airline {{{2
+let g:airline_powerline_fonts=1
+set t_Co=256
+set laststatus=2
 
 " Miscellaneous {{{1
 
