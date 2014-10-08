@@ -23,6 +23,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-bufferline'
+Plugin 'chrisbra/csv.vim'
 
 " General options {{{1
 
@@ -380,43 +381,6 @@ function s:MakefileSettings()
     set nosmarttab  " don't ever use spaces, not even at line beginnings
 endfunction
 
-function CSV_Highlight(x)
-    if b:current_csv_col == 0
-        match Keyword /^[^,]*,/
-    else
-        execute 'match Keyword /^\([^,]*,\)\{'.a:x.'}\zs[^,]*/'
-    endif
-    execute 'normal ^'.a:x.'f,'
-endfunction
-
-function CSV_HighlightNextCol()
-    let b:current_csv_col = b:current_csv_col + 1
-    call CSV_Highlight(b:current_csv_col)
-endfunction
-
-function CSV_HighlightPrevCol()
-    if b:current_csv_col > 0
-        let b:current_csv_col = b:current_csv_col - 1
-    endif
-    call CSV_Highlight(b:current_csv_col)
-endfunction
-
-" Editing files with comma-separated values has never been so fun!
-" All this next stanza does is allow one to use F9 and F10 to highlight
-" the previous and next columns, respectively. This makes editing CSV
-" in Vim much more convenient than visually matching up columns.
-autocmd BufNewFile,Bufread *csv call <SID>CSVSettings()
-function s:CSVSettings()
-    let b:current_csv_col = 0
-    " inspired by Vim tip #667
-
-    " start by highlighting something, probably the first column
-    call CSV_Highlight(b:current_csv_col)
-
-    map <F9> :call CSV_HighlightPrevCol()<CR>
-    map <F10> :call CSV_HighlightNextCol()<CR>
-endfunction
-
 autocmd FileType spec call <SID>SpecfileSettings()
 function s:SpecfileSettings()
     let g:packager = 'Adam Monsen <haircut@gmail.com>'
@@ -546,6 +510,22 @@ noremap <silent> <leader>j :CommandTJump<CR>
 let g:airline_powerline_fonts=1
 set t_Co=256
 set laststatus=2
+
+" Syntastic {{{2
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
+" CSV {{{2
+
+" The CSV plugin (chrisbra/csv.vim) spits out a warning if I don't set
+" b:delimiter and b:col here manually. Warning is:
+"
+"   CSV Syntax:Invalid column pattern, using default pattern \%([^,]*,\|$\)
+"
+" This warning comes from the file ~/.vim/bundle/csv.vim/syntax/csv.vim . The
+" problem may have something to do with the timing of when/how CSV plugin is
+" loaded.
+let b:delimiter=','
+let b:col='\%(\%([^' . b:delimiter . ']*"[^"]*"[^' . b:delimiter . ']*' . b:delimiter . '\)\|\%([^' . b:delimiter . ']*\%(' . b:delimiter . '\|$\)\)\)'
 
 " Miscellaneous {{{1
 
