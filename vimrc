@@ -22,7 +22,6 @@ Plugin 'Slava/vim-spacebars'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-bufferline'
 Plugin 'chrisbra/csv.vim'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
