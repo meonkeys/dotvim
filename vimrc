@@ -5,7 +5,7 @@ filetype off " required by Vundle
 
 " set up Vundle
 set runtimepath+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " Vundle-managed plugins
@@ -25,14 +25,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-bufferline'
 Plugin 'chrisbra/csv.vim'
 
-" General options {{{1
-
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'wincent/Command-T'
 
+call vundle#end() " required by Vundle
 filetype plugin indent on " required by Vundle
+
+" General options {{{1
 
 " These are in alphabetical order, except that the characters 'no' are ignored
 " if they appear at the beginning of an option name.
