@@ -477,9 +477,11 @@ function s:BindZoneSettings()
 endfunction
 
 " Meteor projects
-if (getftype('.meteor') == 'dir')
-    set wildignore=packages/**
-endif
+" CoffeeScript
+autocmd FileType coffee call <SID>CoffeeScriptSettings()
+function s:CoffeeScriptSettings()
+    set tabstop=2 shiftwidth=2
+endfunction
 
 " Addons installed elsewhere {{{1
 
