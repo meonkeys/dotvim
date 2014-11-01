@@ -412,14 +412,20 @@ endfunction
 " provided by http://vim.org/scripts/script.php?script_id=453
 let g:html_tag_case = 'lowercase'
 " HTMLSettings function ready for custom settings...
-"autocmd FileType html call <SID>HTMLSettings()
-"function s:HTMLSettings()
-"endfunction
+autocmd FileType html call <SID>HTMLSettings()
+function s:HTMLSettings()
+    set tabstop=2 shiftwidth=2
+endfunction
 
 " TODO: settings for HTML files
 " :exe 'setlocal equalprg=tidy\ -quiet\ -indent\ -f\ '.&errorfile
 " :compiler tidy
 " :set makeprg=tidy\ -quiet\ -errors\ --gnu-emacs\ yes\ -i\ %
+
+autocmd FileType javascript call <SID>JavaScriptSettings()
+function s:JavaScriptSettings()
+    set tabstop=2 shiftwidth=2
+endfunction
 
 autocmd FileType tex call <SID>TeXfileSettings()
 function s:TeXfileSettings()
