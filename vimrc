@@ -430,6 +430,7 @@ endfunction
 autocmd FileType javascript call <SID>JavaScriptSettings()
 function s:JavaScriptSettings()
     set tabstop=2 shiftwidth=2
+    set formatoptions=tcqln
 endfunction
 
 autocmd FileType tex call <SID>TeXfileSettings()
