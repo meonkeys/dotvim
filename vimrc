@@ -28,6 +28,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
+Plugin 'shumphrey/fugitive-gitlab.vim'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
@@ -540,6 +541,10 @@ let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 " loaded.
 let b:delimiter=','
 let b:col='\%(\%([^' . b:delimiter . ']*"[^"]*"[^' . b:delimiter . ']*' . b:delimiter . '\)\|\%([^' . b:delimiter . ']*\%(' . b:delimiter . '\|$\)\)\)'
+
+" Fugitive {{{2
+" see https://github.com/shumphrey/fugitive-gitlab.vim
+let g:fugitive_gitlab_domains=['gitlab.com']
 
 " Miscellaneous {{{1
 
