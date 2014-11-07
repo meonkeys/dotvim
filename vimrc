@@ -29,6 +29,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-commentary'
 Plugin 'shumphrey/fugitive-gitlab.vim'
+Plugin 'pangloss/vim-javascript'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
@@ -527,6 +528,8 @@ set t_Co=256
 set laststatus=2
 
 " Syntastic {{{2
+let g:syntastic_javascript_checkers = ['gjslint']
+let g:syntastic_javascript_gjslint_args = ['--nojsdoc']
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " CSV {{{2
