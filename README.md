@@ -52,3 +52,7 @@ Some plugins require extra setup.
 
 For Linux, follow the Fontconfig instructions [here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
 General info about integrating vim-airline with fancy fonts [here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
+
+### Syntastic JSON checking
+
+    sudo npm -g install jsonlint
