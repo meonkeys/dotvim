@@ -548,6 +548,8 @@ let b:col='\%(\%([^' . b:delimiter . ']*"[^"]*"[^' . b:delimiter . ']*' . b:deli
 " Fugitive {{{2
 " see https://github.com/shumphrey/fugitive-gitlab.vim
 let g:fugitive_gitlab_domains=['gitlab.com']
+nmap [g :GitGutterPrevHunk<CR>
+nmap ]g :GitGutterNextHunk<CR>
 
 " Miscellaneous {{{1
 
