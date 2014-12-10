@@ -157,6 +157,10 @@ map <F8> :call <SID>Swapcolor()<CR>
 nmap gf :split <cfile><CR>
 " throw in the date, ala [ Sun Sep 26 22:41:43 PDT 2004 ]
 nmap <Leader>dt a[<Esc>:r !date<CR>kJ$a ]<Esc>
+" Use K to grep word under cursor and open all matches in a quickfix window.
+" Requires Tim Pope's Fugitive plugin (installed above).
+" see http://robots.thoughtbot.com/faster-grepping-in-vim
+nnoremap K :Ggrep "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Language-specific settings {{{1
 
