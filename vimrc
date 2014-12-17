@@ -161,7 +161,7 @@ nmap <Leader>dt a[<Esc>:r !date<CR>kJ$a ]<Esc>
 " Use K to grep word under cursor and open all matches in a quickfix window.
 " Requires Tim Pope's Fugitive plugin (installed above).
 " see http://robots.thoughtbot.com/faster-grepping-in-vim
-nnoremap K :Ggrep "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
+nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
 
 " Language-specific settings {{{1
 
