@@ -70,6 +70,10 @@ train Tern for Meteor projects.
     cd ~/.vim/bundle/tern_for_vim/node_modules/tern/plugin/
     wget https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js
 
+### The Silver Searcher
+
+    sudo apt-get -y install silversearcher-ag
+
 # See also
 
 [My "dotfiles"](https://gitlab.com/meonkeys/dotfiles), configuration files for
