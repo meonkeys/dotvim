@@ -47,3 +47,7 @@ then
   cd ~/.config/fontconfig/conf.d
   wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
 fi
+
+# Tern - http://ternjs.net
+cd ~/.vim/bundle/tern_for_vim
+npm install
