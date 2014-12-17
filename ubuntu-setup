@@ -1,0 +1,49 @@
+#!/bin/bash
+
+isDebianPackageInstalled() {
+  dpkg-query -W -f='${Status}' $1 2>/dev/null | grep -q 'ok installed'
+}
+
+installDebianPackage() {
+  if ! isDebianPackageInstalled $1
+  then
+    sudo apt-get -y install $1
+  fi
+}
+
+installNpmPackage() {
+  if ! which $1
+  then
+    sudo npm -g install $1
+  fi
+}
+
+# YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+
+# Command-T
+installDebianPackage ruby1.9.1-dev
+cd ~/.vim/bundle/Command-T/ruby/command-t/
+ruby extconf.rb
+make
+
+# Syntastic: json
+installNpmPackage jsonlint
+# Syntastic: javascript
+installDebianPackage closure-linter
+
+# The Silver Searcher
+installDebianPackage silversearcher-ag
+
+# Airline (needs special fonts)
+if ! [[ -r ~/.fonts/PowerlineSymbols.otf ]]
+then
+  mkdir -p ~/.fonts
+  cd ~/.fonts
+  wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
+  fc-cache -vf ~/.fonts/
+  mkdir -p ~/.config/fontconfig/conf.d
+  cd ~/.config/fontconfig/conf.d
+  wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+fi

@@ -34,31 +34,15 @@ instructions.
 
 ## Misc Plugin Notes
 
-Some plugins require extra setup.
-
-### YouCompleteMe
-
-    cd ~/.vim/bundle/YouCompleteMe
-    ./install.sh --clang-completer
-
-### Command-T
-
-    sudo apt-get install ruby1.9.1-dev
-    cd ~/.vim/bundle/Command-T/ruby/command-t/
-    ruby extconf.rb
-    make
+Some plugins require extra setup. I use `ubuntu-setup` to get them working.
 
 ### Airline
 
-For Linux, follow the Fontconfig instructions [here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
-General info about integrating vim-airline with fancy fonts [here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
-
-### Syntastic
-
-    # json
-    sudo npm -g install jsonlint
-    # javascript
-    sudo apt-get install closure-linter
+For GNU/Linux operating systems besides Ubuntu, follow the Fontconfig
+instructions
+[here](https://powerline.readthedocs.org/en/master/installation/linux.html#fontconfig).
+General info about integrating vim-airline with fancy fonts
+[here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
 
 ### Tern
 
@@ -69,10 +53,6 @@ train Tern for Meteor projects.
 
     cd ~/.vim/bundle/tern_for_vim/node_modules/tern/plugin/
     wget https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js
-
-### The Silver Searcher
-
-    sudo apt-get -y install silversearcher-ag
 
 # See also
 
