@@ -31,6 +31,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'shumphrey/fugitive-gitlab.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
+Plugin 'vim-scripts/nginx.vim'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
