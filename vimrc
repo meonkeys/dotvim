@@ -556,6 +556,9 @@ let g:fugitive_gitlab_domains=['gitlab.com']
 nmap [g :GitGutterPrevHunk<CR>
 nmap ]g :GitGutterNextHunk<CR>
 
+" Slava/vim-spacebars {{{2
+let g:mustache_abbreviations=1
+
 " Miscellaneous {{{1
 
 " see ':he last-position-jump'
