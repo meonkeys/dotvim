@@ -351,7 +351,6 @@ let g:omni_sql_no_default_maps = 1
 
 autocmd FileType mail call <SID>MailFileSettings()
 function s:MailFileSettings()
-    set textwidth=68
     set spell
     set formatoptions+=n
     " See 'smartindent' and
