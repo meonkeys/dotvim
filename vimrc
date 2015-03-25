@@ -95,9 +95,10 @@ set showfulltag    " show prototype when completing words using tags file
 set showmatch
 set smarttab
 set smartindent
-set shiftwidth=4
+set shiftwidth=2
 set nostartofline
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.class
+set tabstop=2
 set title
 set ttyfast        " we have a fast terminal connection
 set ttyscroll=3
@@ -423,20 +424,9 @@ endfunction
 " Some of the HTML-specific settings require the HTML/XHTML editing macros
 " provided by http://vim.org/scripts/script.php?script_id=453
 let g:html_tag_case = 'lowercase'
-" HTMLSettings function ready for custom settings...
-autocmd FileType html call <SID>HTMLSettings()
-function s:HTMLSettings()
-    set tabstop=2 shiftwidth=2
-endfunction
-
-" TODO: settings for HTML files
-" :exe 'setlocal equalprg=tidy\ -quiet\ -indent\ -f\ '.&errorfile
-" :compiler tidy
-" :set makeprg=tidy\ -quiet\ -errors\ --gnu-emacs\ yes\ -i\ %
 
 autocmd FileType javascript call <SID>JavaScriptSettings()
 function s:JavaScriptSettings()
-    set tabstop=2 shiftwidth=2
     set formatoptions=tcqln
 endfunction
 
@@ -473,8 +463,6 @@ autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
     set makeprg=beautify\ %\ >\ /tmp/out.html
     autocmd BufWritePost *.md silent make
-    set shiftwidth=2
-    set tabstop=2
     set conceallevel=0
 endfunction
 
@@ -493,13 +481,6 @@ function s:BindZoneSettings()
     endfunction
 
     autocmd BufWritePre /etc/bind/db.* call <SID>ReplaceBindZoneSerialLine()
-endfunction
-
-" Meteor projects
-" CoffeeScript
-autocmd FileType coffee call <SID>CoffeeScriptSettings()
-function s:CoffeeScriptSettings()
-    set tabstop=2 shiftwidth=2
 endfunction
 
 " Addons installed elsewhere {{{1
