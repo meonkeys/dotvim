@@ -535,6 +535,10 @@ let b:col='\%(\%([^' . b:delimiter . ']*"[^"]*"[^' . b:delimiter . ']*' . b:deli
 let g:fugitive_gitlab_domains=['gitlab.com']
 nmap [g :GitGutterPrevHunk<CR>
 nmap ]g :GitGutterNextHunk<CR>
+" customize gutter for my white-background color scheme
+let g:gitgutter_override_sign_column_highlight = 0
+highlight SignColumn ctermbg=LightGray
+highlight SignColumn guibg=LightGray
 
 " Slava/vim-spacebars {{{2
 let g:mustache_abbreviations=1
