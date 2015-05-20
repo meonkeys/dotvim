@@ -2,29 +2,37 @@
 
 My "dot vim" (`~/.vim`) dir.
 
-# Install
+## Features
+
+* Great starting point for using Vim for editing source code in many
+  programming languages.
+* Easy to extend: all plugins are loaded with [Vundle](https://github.com/gmarik/Vundle.vim).
+* Fold-able, well-commented vimrc file.
+* Lots of great ideas and some terrible ones!
+
+## Install
 
 Here's how to install this Vim configuration. Assumes Bash shell and a POSIX
 operating system.
 
-## Replace existing Vim configuration
+### Replace existing Vim configuration
 
     cd ~
     mv .vim .vimrc /tmp
     ln -s ~/.vim/vimrc .vimrc
 
-## Install Adam's Vim Setup
+### Install Adam's Vim Setup
 
     git clone https://github.com/meonkeys/dotvim.git .vim
     cd .vim
 
-## Install Vundle
+### Install Vundle
 
 Plugins are managed with Vundle. Install Vundle:
 
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-## Install Plugins
+### Install Plugins
 
 Start Vim and run `:PluginInstall`. Done!
 
@@ -32,11 +40,11 @@ Plugins are enumerated in `vimrc`. See the vundle documentation in `:help
 vundle` or [online](https://github.com/gmarik/Vundle.vim) for further
 instructions.
 
-## Misc Plugin Notes
+### Misc Plugin Notes
 
 Some plugins require extra setup. I use `ubuntu-setup` to get them working.
 
-### Airline
+#### Airline
 
 For GNU/Linux operating systems besides Ubuntu, follow the Fontconfig
 instructions
@@ -44,7 +52,7 @@ instructions
 General info about integrating vim-airline with fancy fonts
 [here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
 
-### Tern
+#### Tern
 
 [Tern](http://ternjs.net/) provides some [IDE-like features when editing
 JavaScript](https://www.youtube.com/watch?v=TIE9ZOqlvFo). Tern needs
