@@ -165,6 +165,14 @@ nmap <Leader>dt a[<Esc>:r !date<CR>kJ$a ]<Esc>
 " see http://robots.thoughtbot.com/faster-grepping-in-vim
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
 
+" In normal mode use semicolon for colon and double-colon for what colon
+" normally does. This makes it much more convenient to enter command mode from
+" normal mode.
+" See https://twitter.com/meonkeys/status/600906896480960513
+" and https://news.ycombinator.com/item?id=9574729
+nmap ; :
+noremap ;; ;
+
 " Language-specific settings {{{1
 
 " Simple filetype detection {{{2
