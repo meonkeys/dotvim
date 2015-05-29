@@ -202,6 +202,7 @@ au BufNewFile,BufRead /var/log/apache* setfiletype apachelog
 au BufNewFile,BufRead /etc/my.cnf setfiletype dosini
 au BufNewFile,BufRead *.twig setfiletype twig
 au BufNewFile,BufRead deps setfiletype dosini
+au FileType json set conceallevel=0
 
 " Complex filetype adaptations {{{2
 " some C shortcuts
