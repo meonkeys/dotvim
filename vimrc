@@ -165,6 +165,9 @@ nmap <Leader>dt a[<Esc>:r !date<CR>kJ$a ]<Esc>
 " Requires Tim Pope's Fugitive plugin (installed above).
 " see http://robots.thoughtbot.com/faster-grepping-in-vim
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
+" Enter key turns off highlighting
+" See http://stackoverflow.com/a/662914/156060
+nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
 " In normal mode use semicolon for colon and double-colon for what colon
 " normally does. This makes it much more convenient to enter command mode from
