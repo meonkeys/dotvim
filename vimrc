@@ -197,19 +197,19 @@ autocmd BufRead,BufNewFile *.rhtml setfiletype eruby
 " FreeMarker
 autocmd BufNewFile,BufRead *.ftl setfiletype ftl
 " zipped files w/o .zip extension (see :he zip-extension)
-au BufReadCmd *.jar,*.xpi,*.prpt call zip#Browse(expand("<amatch>"))
-au BufNewFile,BufRead *.t2t setfiletype txt2tags
-au BufNewFile,BufRead *.gradle setfiletype groovy
-" since I probably want to email around plain-text recipes
-au BufNewFile,BufRead */personal/ref/recipes/* setfiletype mail
-au FileType tags set noexpandtab nosmarttab
-au BufNewFile,BufRead ~/.gvfs/* set noswapfile
-au BufNewFile,BufRead */bv-secrets/pwd* set noexpandtab nosmarttab
-au BufNewFile,BufRead /var/log/apache* setfiletype apachelog
-au BufNewFile,BufRead /etc/my.cnf setfiletype dosini
-au BufNewFile,BufRead *.twig setfiletype twig
-au BufNewFile,BufRead deps setfiletype dosini
-au FileType json set conceallevel=0
+autocmd BufReadCmd *.jar,*.xpi,*.prpt call zip#Browse(expand("<amatch>"))
+autocmd BufNewFile,BufRead *.t2t setfiletype txt2tags
+autocmd BufNewFile,BufRead *.gradle setfiletype groovy
+" tocmdsince I probably want to email around plain-text recipes
+autocmd BufNewFile,BufRead */personal/ref/recipes/* setfiletype mail
+autocmd FileType tags set noexpandtab nosmarttab
+autocmd BufNewFile,BufRead ~/.gvfs/* set noswapfile
+autocmd BufNewFile,BufRead */bv-secrets/pwd* set noexpandtab nosmarttab
+autocmd BufNewFile,BufRead /var/log/apache* setfiletype apachelog
+autocmd BufNewFile,BufRead /etc/my.cnf setfiletype dosini
+autocmd BufNewFile,BufRead *.twig setfiletype twig
+autocmd BufNewFile,BufRead deps setfiletype dosini
+autocmd FileType json set conceallevel=0
 " force json handlebars (uses 'html' otherwise)
 autocmd BufNewFile,BufRead *.json.hbs set filetype=json
 
