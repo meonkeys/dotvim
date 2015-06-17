@@ -180,6 +180,10 @@ noremap ;; ;
 " Language-specific settings {{{1
 
 " Simple filetype detection {{{2
+
+" see also: http://vim.wikia.com/wiki/Forcing_Syntax_Coloring_for_files_with_odd_extensions
+" 'set filetype=x' forces a filetype, 'setfiletype' only sets a filetype if
+" none was detected
 autocmd BufRead,BufNewFile *inputrc setfiletype readline
 autocmd BufNewFile,Bufread mig.cf setfiletype html
 autocmd BufNewFile,Bufread *.jad setfiletype java
@@ -206,6 +210,8 @@ au BufNewFile,BufRead /etc/my.cnf setfiletype dosini
 au BufNewFile,BufRead *.twig setfiletype twig
 au BufNewFile,BufRead deps setfiletype dosini
 au FileType json set conceallevel=0
+" force json handlebars (uses 'html' otherwise)
+autocmd BufNewFile,BufRead *.json.hbs set filetype=json
 
 " Complex filetype adaptations {{{2
 " some C shortcuts
