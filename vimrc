@@ -483,7 +483,8 @@ autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
     set makeprg=beautify\ %\ >\ /tmp/out.html
     autocmd BufWritePost *.md silent make
-    set conceallevel=0
+    " http://stackoverflow.com/a/27686668/156060
+    match todo /TODO/
 endfunction
 
 " Bind9 zone database files
