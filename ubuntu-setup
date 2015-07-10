@@ -20,7 +20,10 @@ installNpmPackage() {
 
 # YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+if ! [[ -x third_party/ycmd/ycm_core.so ]]
+then
+  ./install.sh --clang-completer
+fi
 
 # Command-T
 installDebianPackage ruby1.9.1-dev
