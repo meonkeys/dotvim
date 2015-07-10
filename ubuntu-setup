@@ -34,7 +34,7 @@ fi
 # Syntastic: json
 installNpmPackage jsonlint
 # Syntastic: javascript
-installDebianPackage jshint
+installNpmPackage jshint
 
 # The Silver Searcher
 installDebianPackage silversearcher-ag
