@@ -25,8 +25,11 @@ cd ~/.vim/bundle/YouCompleteMe
 # Command-T
 installDebianPackage ruby1.9.1-dev
 cd ~/.vim/bundle/Command-T/ruby/command-t/
-ruby extconf.rb
-make
+if ! [[ -x ext.so ]]
+then
+  ruby extconf.rb
+  make
+fi
 
 # Syntastic: json
 installNpmPackage jsonlint
