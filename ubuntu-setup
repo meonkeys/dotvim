@@ -36,8 +36,12 @@ fi
 
 # Syntastic: json
 installNpmPackage jsonlint
+
 # Syntastic: javascript
 installNpmPackage jshint
+
+# Syntastic: shell
+installDebianPackage shellcheck
 
 # The Silver Searcher
 installDebianPackage silversearcher-ag
