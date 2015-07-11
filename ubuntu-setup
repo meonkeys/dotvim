@@ -61,3 +61,6 @@ fi
 # Tern - http://ternjs.net
 cd ~/.vim/bundle/tern_for_vim
 npm install
+
+# Tern Meteor config
+curl --silent https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js > ~/.vim/bundle/tern_for_vim/node_modules/tern/plugin/meteor.js

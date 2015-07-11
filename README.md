@@ -52,16 +52,6 @@ instructions
 General info about integrating vim-airline with fancy fonts
 [here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
 
-#### Tern
-
-[Tern](http://ternjs.net/) provides some [IDE-like features when editing
-JavaScript](https://www.youtube.com/watch?v=TIE9ZOqlvFo). Tern needs
-definitions of types for JavaScript libraries in use. For example, here's how I
-train Tern for Meteor projects.
-
-    cd ~/.vim/bundle/tern_for_vim/node_modules/tern/plugin/
-    wget https://raw.githubusercontent.com/Slava/tern-meteor/master/meteor.js
-
 # See also
 
 [My "dotfiles"](https://gitlab.com/meonkeys/dotfiles), configuration files for
