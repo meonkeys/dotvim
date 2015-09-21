@@ -535,7 +535,6 @@ set t_Co=256
 set laststatus=2
 
 " Syntastic {{{2
-let g:syntastic_javascript_checkers = ['jshint']
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " CSV {{{2
