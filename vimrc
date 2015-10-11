@@ -152,18 +152,13 @@ endif
 " Key Mappings {{{1
 
 set pastetoggle=<F2>
-map <F3> :set number!<CR>
-map <F4> :set wrap!<CR>
-map <F5> :set list!<CR>
 nmap <F6> :make<CR>
-" map F8 to switch on and off syntax highlighting
-map <F8> :call <SID>Swapcolor()<CR>
 " gf usually just opens the file in the same window
 nmap gf :split <cfile><CR>
 " throw in the date, ala [ Sun Sep 26 22:41:43 PDT 2004 ]
 nmap <Leader>dt a[<Esc>:r !date<CR>kJ$a ]<Esc>
 " Use K to grep word under cursor and open all matches in a quickfix window.
-" Requires Tim Pope's Fugitive plugin (installed above).
+" Requires Silver Searcher plugin ("ag", installed above).
 " see http://robots.thoughtbot.com/faster-grepping-in-vim
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
 " Enter key turns off highlighting
