@@ -22,7 +22,6 @@ Plugin 'Slava/vim-spacebars'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
-Plugin 'chrisbra/csv.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-speeddating'
@@ -531,19 +530,6 @@ set laststatus=2
 
 " Syntastic {{{2
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-
-" CSV {{{2
-
-" The CSV plugin (chrisbra/csv.vim) spits out a warning if I don't set
-" b:delimiter and b:col here manually. Warning is:
-"
-"   CSV Syntax:Invalid column pattern, using default pattern \%([^,]*,\|$\)
-"
-" This warning comes from the file ~/.vim/bundle/csv.vim/syntax/csv.vim . The
-" problem may have something to do with the timing of when/how CSV plugin is
-" loaded.
-let b:delimiter=','
-let b:col='\%(\%([^' . b:delimiter . ']*"[^"]*"[^' . b:delimiter . ']*' . b:delimiter . '\)\|\%([^' . b:delimiter . ']*\%(' . b:delimiter . '\|$\)\)\)'
 
 " Fugitive {{{2
 " see https://github.com/shumphrey/fugitive-gitlab.vim
