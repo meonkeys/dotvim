@@ -32,6 +32,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
+Plugin 'fatih/vim-go'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
