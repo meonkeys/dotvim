@@ -523,6 +523,7 @@ endif
 let g:CommandTNeverShowDotFiles=1
 noremap <silent> <leader>b :CommandTMRU<CR>
 noremap <silent> <leader>j :CommandTJump<CR>
+let g:CommandTFileScanner="git"
 
 " Airline {{{2
 let g:airline_powerline_fonts=1
