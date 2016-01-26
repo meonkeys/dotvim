@@ -476,10 +476,12 @@ endfunction
 autocmd BufNewFile,BufRead *.md,*.mkd set filetype=markdown
 autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
-    set makeprg=beautify\ %\ >\ /tmp/out.html
+    set makeprg=pandoc\ %\ >\ /tmp/out.html
+    " set makeprg=make\ --silent
     autocmd BufWritePost *.md silent make
     " http://stackoverflow.com/a/27686668/156060
     match todo /TODO/
+    match todo /FIXME/
 endfunction
 
 " Bind9 zone database files
