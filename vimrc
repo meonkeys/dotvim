@@ -82,7 +82,7 @@ set matchtime=2
 set matchpairs=(:),{:},[:],<:>
 set mousemodel=popup
 set nojoinspaces
-set nonumber
+set number
 " see :help 'statusline' for format of printheader (note spaces need escaping)
 set printheader=%<%f\ %y%=Adam\ Monsen\ \ --\ \ Page\ %N\ (%P)
 "set printheader=%<%f\ %y%=Page\ %N\ (%P)
