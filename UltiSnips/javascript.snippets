@@ -2,3 +2,17 @@
 snippet fi
 function(${1}) { ${0} }
 endsnippet
+
+snippet /* "A JSDoc comment" b
+/**
+ * ${1:${VISUAL}}$0
+ */
+endsnippet
+
+snippet @p "@param {Type} varname Description"
+@param {${1:Type}} ${2:varname} ${3:Description}
+endsnippet
+
+snippet @ret "@return {Type} Description"
+@return {${1:Type}} ${2:Description}
+endsnippet
