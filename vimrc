@@ -526,6 +526,8 @@ let g:CommandTNeverShowDotFiles=1
 noremap <silent> <leader>b :CommandTMRU<CR>
 noremap <silent> <leader>j :CommandTJump<CR>
 let g:CommandTFileScanner="git"
+let g:CommandTMatchWindowReverse=0
+let g:CommandTHighlightColor="Search"
 
 " Airline {{{2
 let g:airline_powerline_fonts=1
