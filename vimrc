@@ -476,8 +476,7 @@ endfunction
 autocmd BufNewFile,BufRead *.md,*.mkd set filetype=markdown
 autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
-    set makeprg=pandoc\ %\ >\ /tmp/out.html
-    " set makeprg=make\ --silent
+    set makeprg=mdfmt\ %
     autocmd BufWritePost *.md silent make
     " http://stackoverflow.com/a/27686668/156060
     match todo /TODO/
