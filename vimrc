@@ -208,6 +208,7 @@ autocmd BufNewFile,BufRead deps setfiletype dosini
 autocmd FileType json set conceallevel=0
 " force json handlebars (uses 'html' otherwise)
 autocmd BufNewFile,BufRead *.json.hbs set filetype=json
+autocmd BufNewFile,BufRead Jenkinsfile setfiletype groovy
 
 " Complex filetype adaptations {{{2
 " some C shortcuts
