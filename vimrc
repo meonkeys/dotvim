@@ -480,8 +480,7 @@ function s:MarkdownFileSettings()
     set makeprg=mdfmt\ %
     autocmd BufWritePost *.md silent make
     " http://stackoverflow.com/a/27686668/156060
-    match todo /TODO/
-    match todo /FIXME/
+    match todo /FIXME\|TODO/
 endfunction
 
 " Bind9 zone database files
