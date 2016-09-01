@@ -274,16 +274,10 @@ function s:PomXmlSettings()
 endfunction
 
 " Vimoutliner
-autocmd BufRead,BufNewFile *.otl call <SID>VimOutlinerSettings()
+autocmd FileType votl call <SID>VimOutlinerSettings()
 function s:VimOutlinerSettings()
-    set filetype=vo_base
     set foldcolumn=0
-    " Work around Vundle or whatever breaks VimOutliner stuff.
-    source $HOME/.vim/bundle/vimoutliner/ftdetect/votl.vim
-    source $HOME/.vim/bundle/vimoutliner/ftplugin/votl.vim
-    source $HOME/.vim/bundle/vimoutliner/syntax/votl.vim
 endfunction
-autocmd FileType vo_base highlight Folded ctermfg=4
 
 autocmd BufNewFile *.java call <SID>NewJavaFileTemplate()
 function s:NewJavaFileTemplate()
