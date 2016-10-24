@@ -556,6 +556,9 @@ else
     map ,e :e <C-R>=expand("%:p:h") . "\" <CR>
 endif
 
+" U+203D INTERROBANG
+digraphs ?! 8253
+
 " Shell Script Goodies {{{2
 
 " see ':he syntax' for more info
