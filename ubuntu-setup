@@ -14,7 +14,7 @@ installDebianPackage() {
 installNpmPackage() {
   if ! which $1 > /dev/null
   then
-    sudo npm -g install $1
+    sudo $(which npm) -g install $1
   fi
 }
 
@@ -26,7 +26,7 @@ then
 fi
 
 # Command-T
-installDebianPackage ruby1.9.1-dev
+installDebianPackage ruby2.3-dev
 cd ~/.vim/bundle/Command-T/ruby/command-t/
 if ! [[ -x ext.so ]]
 then
