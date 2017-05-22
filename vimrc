@@ -277,6 +277,8 @@ endfunction
 autocmd FileType votl call <SID>VimOutlinerSettings()
 function s:VimOutlinerSettings()
     set foldcolumn=0
+    " http://stackoverflow.com/a/27686668/156060
+    match todo /FIXME\|TODO/
 endfunction
 
 autocmd BufNewFile *.java call <SID>NewJavaFileTemplate()
@@ -472,6 +474,8 @@ autocmd BufNewFile,BufRead *.md,*.mkd set filetype=markdown
 autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
     set makeprg=mdfmt\ %
+    set linebreak
+    set spell
     autocmd BufWritePost *.md silent make
     " http://stackoverflow.com/a/27686668/156060
     match todo /FIXME\|TODO/
