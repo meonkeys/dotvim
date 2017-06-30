@@ -97,7 +97,10 @@ set showmatch
 set smarttab
 set smartindent
 set shiftwidth=2
-set nostartofline
+" try this out since hearing a suggestion in VIM Adventures:
+" use number + G to get to the first non-blank character in that line
+" and that : does the same thing
+set startofline
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.class
 set tabstop=2
 set title
