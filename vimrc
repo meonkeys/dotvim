@@ -16,7 +16,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/syntastic'
-Plugin 'sjl/gundo.vim'
 Plugin 'elzr/vim-json'
 Plugin 'Slava/vim-spacebars'
 Plugin 'marijnh/tern_for_vim'
@@ -33,6 +32,7 @@ Plugin 'rking/ag.vim'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 Plugin 'fatih/vim-go'
+Plugin 'mbbill/undotree'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
