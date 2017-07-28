@@ -111,6 +111,7 @@ if version >= 703
 endif
 set visualbell
 set virtualedit=
+set whichwrap+=<,>
 set wildignore+=node_modules/**
 set wildmenu
 set wildmode=list:longest
