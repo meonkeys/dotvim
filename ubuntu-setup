@@ -27,7 +27,7 @@ fi
 
 # Command-T
 installDebianPackage ruby2.3-dev
-cd ~/.vim/bundle/Command-T/ruby/command-t/
+cd ~/.vim/bundle/Command-T/ruby/command-t/ext/command-t/
 if ! [[ -x ext.so ]]
 then
   ruby extconf.rb
