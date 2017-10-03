@@ -280,6 +280,8 @@ endfunction
 " Vimoutliner
 autocmd FileType votl call <SID>VimOutlinerSettings()
 function s:VimOutlinerSettings()
+    set makeprg=otlfmt\ %
+    autocmd BufWritePost *.otl silent make
     set foldcolumn=0
     " http://stackoverflow.com/a/27686668/156060
     match todo /FIXME\|TODO/
