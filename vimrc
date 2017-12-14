@@ -33,6 +33,8 @@ Plugin 'vim-scripts/nginx.vim'
 Plugin 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 Plugin 'fatih/vim-go'
 Plugin 'mbbill/undotree'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " Fix leader for VimOutliner files. Not sure why this is necessary.
 let maplocalleader=",,"
@@ -479,9 +481,8 @@ endfunction
 autocmd BufNewFile,BufRead *.md,*.markdown set filetype=markdown
 autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
+    set conceallevel=2
     set makeprg=mdfmt\ %
-    set linebreak
-    set spell
     autocmd BufWritePost *.md,*.markdown silent make
     " http://stackoverflow.com/a/27686668/156060
     match todo /FIXME\|TODO/
