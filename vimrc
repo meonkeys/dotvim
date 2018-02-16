@@ -141,7 +141,7 @@ endfunction
 
 " Bracketed paste mode
 
-if &term =~ "xterm.*"
+if &term =~ "xterm" || &term =~ "screen"
     let &t_ti = &t_ti . "\e[?2004h"
     let &t_te = "\e[?2004l" . &t_te
     function XTermPasteBegin(ret)
