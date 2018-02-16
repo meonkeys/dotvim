@@ -421,13 +421,6 @@ function s:SpecfileSettings()
     let g:spec_chglog_release_info = 1
 endfunction
 
-" special journal settings
-autocmd BufNewFile,Bufread journal*.txt call <SID>JournalSettings()
-function s:JournalSettings()
-    setlocal spell spelllang=en_us
-    set tw=72
-endfunction
-
 " Adapt to GRE word study lists
 autocmd BufNewFile,Bufread */gre_prep/*word*.txt call <SID>QuizDBSettings()
 function s:QuizDBSettings()
