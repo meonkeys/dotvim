@@ -471,12 +471,11 @@ function s:ChordFileSettings()
     set virtualedit=all mouse=a
 endfunction
 
-autocmd BufNewFile,BufRead *.md,*.markdown set filetype=markdown
 autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
     set conceallevel=2
     set makeprg=mdfmt\ %
-    autocmd BufWritePost *.md,*.markdown silent make
+    autocmd! BufWritePost *.md,*.markdown silent make
     " http://stackoverflow.com/a/27686668/156060
     match todo /FIXME\|TODO/
 endfunction
