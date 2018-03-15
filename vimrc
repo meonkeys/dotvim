@@ -474,7 +474,7 @@ endfunction
 autocmd FileType markdown call <SID>MarkdownFileSettings()
 function s:MarkdownFileSettings()
     set conceallevel=2
-    set makeprg=mdfmt\ %
+    set makeprg=mdfmt\ '%'
     autocmd! BufWritePost *.md,*.markdown silent make
     " http://stackoverflow.com/a/27686668/156060
     match todo /FIXME\|TODO/
