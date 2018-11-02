@@ -14,7 +14,7 @@ installDebianPackage() {
 installNpmPackage() {
   if ! which $1 > /dev/null
   then
-    sudo $(which npm) -g install $1
+    npm -g install $1
   fi
 }
 
