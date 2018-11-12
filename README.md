@@ -44,6 +44,8 @@ instructions.
 
 Some plugins require extra setup. I use `ubuntu-setup` to get them working.
 
+Only install `vim-nox` on Ubuntu 18.04. `vim-gtk` and others do not have ruby support. If `update-alternatives` points to the wrong one you won't get `+ruby` and Command-T won't work.
+
 #### Airline
 
 For GNU/Linux operating systems besides Ubuntu, follow the Fontconfig
