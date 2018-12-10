@@ -539,9 +539,6 @@ let g:fugitive_gitlab_domains=['gitlab.com']
 nmap [g :GitGutterPrevHunk<CR>
 nmap ]g :GitGutterNextHunk<CR>
 
-" Valloric/YouCompleteMe {{{2
-let g:ycm_path_to_python_interpreter='/usr/bin/python'
-
 " Slava/vim-spacebars {{{2
 let g:mustache_abbreviations=1
 

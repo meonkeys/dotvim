@@ -19,11 +19,8 @@ installNpmPackage() {
 }
 
 # YouCompleteMe
-cd ~/.vim/bundle/YouCompleteMe
-if ! [[ -x third_party/ycmd/ycm_core.so ]]
-then
-  ./install.sh --clang-completer
-fi
+installDebianPackage libclang-dev
+python3 install.py --go-completer --ts-completer --java-completer --clang-completer
 
 # Command-T
 installDebianPackage ruby-dev
