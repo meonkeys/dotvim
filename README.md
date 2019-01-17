@@ -34,17 +34,14 @@ Plugins are managed with Vundle. Install Vundle:
 
 ### Install Plugins
 
-Start Vim and run `:PluginInstall`. Done!
-
-Plugins are enumerated in `vimrc`. See the vundle documentation in `:help
-vundle` or [online](https://github.com/gmarik/Vundle.vim) for further
-instructions.
+Start Vim and run `:PluginInstall`. If you are using Ubuntu, exit Vim and run `ubuntu-setup` from Bash for additional plugin setup.
 
 ### Misc Plugin Notes
 
-Some plugins require extra setup. I use `ubuntu-setup` to get them working.
+Plugins are enumerated in `vimrc`. See the vundle documentation in `:help
+vundle` or [online](https://github.com/gmarik/Vundle.vim) for further
 
-Only install `vim-nox` on Ubuntu 18.04. `vim-gtk` and others do not have ruby support. If `update-alternatives` points to the wrong one you won't get `+ruby` and Command-T won't work.
+Only install the `vim-gtk` package (via apt) on Ubuntu 18.04. [Other Vim-related packages may muck up ruby support](https://askubuntu.com/questions/61141/compiling-vim-gnome-with-ruby-support/1092140#1092140). If `update-alternatives` points to the wrong one you won't get `+ruby` and Command-T won't work.
 
 #### Airline
 
@@ -53,6 +50,10 @@ instructions
 [here](https://powerline.readthedocs.org/en/master/installation/linux.html#fontconfig).
 General info about integrating vim-airline with fancy fonts
 [here](https://github.com/bling/vim-airline#integrating-with-powerline-fonts).
+
+## Bugs
+
+* TODO automate nvm and node install
 
 # See also
 

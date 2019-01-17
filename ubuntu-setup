@@ -19,11 +19,13 @@ installNpmPackage() {
 }
 
 # YouCompleteMe
-installDebianPackage libclang-dev
+installDebianPackage libclang-dev build-essential cmake python3-dev
+cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --go-completer --ts-completer --java-completer --clang-completer
 
 # Command-T
 installDebianPackage ruby-dev
+sudo snap install go
 cd ~/.vim/bundle/Command-T/ruby/command-t/ext/command-t/
 if ! [[ -x ext.so ]]
 then
