@@ -97,6 +97,7 @@ set shiftround
 set showcmd        " display incomplete commands
 set showfulltag    " show prototype when completing words using tags file
 set showmatch
+set smartcase
 set smarttab
 set smartindent
 set shiftwidth=2
