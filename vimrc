@@ -100,13 +100,13 @@ set showmatch
 set smartcase
 set smarttab
 set smartindent
-set shiftwidth=2
+set shiftwidth=4
 " try this out since hearing a suggestion in VIM Adventures:
 " use number + G to get to the first non-blank character in that line
 " and that : does the same thing
 set startofline
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.class
-set tabstop=2
+set tabstop=4
 set title
 set ttyfast        " we have a fast terminal connection
 set ttyscroll=3
@@ -278,7 +278,7 @@ endfunction
 " Maven pom.xml files
 autocmd BufRead,BufNewFile pom.xml call <SID>PomXmlSettings()
 function s:PomXmlSettings()
-    set tabstop=4 shiftwidth=4 expandtab smartindent
+    set expandtab smartindent
 endfunction
 
 " Vimoutliner
@@ -310,7 +310,7 @@ endfunction
 
 autocmd FileType python call <SID>PythonPrgSettings()
 function s:PythonPrgSettings()
-    set shiftwidth=4 tabstop=4 expandtab
+    set expandtab
     nmap <Leader>pd :!pydoc <cword><CR>
     "set makeprg=python\ -tt\ %
     " cindent seems to make comments on a new line stay on the current column
@@ -327,8 +327,6 @@ function s:PhpPrgSettings()
     iab pdd ?><pre><?php print_r() ?></pre><?php <Esc>15hi
     iab udd <pre><?php print_r() ?></pre><Esc>9hi
     set indentexpr=
-    set shiftwidth=4
-    set tabstop=4
     set autoindent
     set smartindent
     set keywordprg=php_doc
