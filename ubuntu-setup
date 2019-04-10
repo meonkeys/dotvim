@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -o errexit
+set -o nounset
+set -o pipefail
+
 isDebianPackageInstalled() {
   dpkg-query -W -f='${Status}' $1 2>/dev/null | grep -q 'ok installed'
 }
@@ -7,7 +11,7 @@ isDebianPackageInstalled() {
 installDebianPackage() {
   if ! isDebianPackageInstalled $1
   then
-    sudo apt-get -y install $1
+    sudo apt -y install $1
   fi
 }
 
@@ -19,13 +23,16 @@ installNpmPackage() {
 }
 
 # YouCompleteMe
-installDebianPackage libclang-dev build-essential cmake python3-dev
+installDebianPackage libclang-dev
+installDebianPackage build-essential
+installDebianPackage cmake
+installDebianPackage python3-dev
 cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --go-completer --ts-completer --java-completer --clang-completer
 
 # Command-T
 installDebianPackage ruby-dev
-sudo snap install go
+sudo snap install --classic go
 cd ~/.vim/bundle/Command-T/ruby/command-t/ext/command-t/
 if ! [[ -x ext.so ]]
 then
