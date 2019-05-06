@@ -521,6 +521,14 @@ function s:BindZoneSettings()
     autocmd BufWritePre /etc/bind/db.* call <SID>ReplaceBindZoneSerialLine()
 endfunction
 
+autocmd FileType vim call <SID>VimFileSettings()
+function s:VimFileSettings()
+    set shiftwidth=2
+    set conceallevel=2
+    set tabstop=2
+    nmap <F6> :Test<CR>
+endfunction
+
 " Plugin settings {{{1
 
 " UltiSnips {{{2
