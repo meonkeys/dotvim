@@ -529,6 +529,21 @@ function s:VimFileSettings()
     nmap <F6> :Test<CR>
 endfunction
 
+" From https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
+" via https://github.com/nedbat/dot/blob/master/.vimrc#L722-L733 (thank you
+" nedbat in #vim on Freenode)
+command! -range=% RemoveFancyCharacters :<line1>,<line2>call <SID>RemoveFancyCharacters()
+function! <SID>RemoveFancyCharacters() range
+  let typo = {}
+  let typo["“"] = '"'
+  let typo["”"] = '"'
+  let typo["‘"] = "'"
+  let typo["’"] = "'"
+  let typo["—"] = '--'
+  let typo["…"] = '...'
+  execute ':'.a:firstline.','.a:lastline.'s/'.join(keys(typo), '\|').'/\=typo[submatch(0)]/ge'
+endfunction
+
 " Plugin settings {{{1
 
 " UltiSnips {{{2
