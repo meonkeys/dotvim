@@ -157,6 +157,27 @@ if &term =~ 'xterm\|screen'
     cmap <Esc>[201~ <nop>
 endif
 
+" Adapted from Damian Conway's /More Instantly Better Vim/ - OSCON 2013
+" ( https://youtu.be/aHm36-na4-4?t=437 )
+function! g:HLNext(blinktime)
+    highlight WhiteOnRed ctermfg=white ctermbg=red
+    let [bufnum, lnum, col, off] = getpos('.')
+    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+    let target_pat = '\c\%#'.@/
+    let blinks = 1
+    for n in range(1, blinks)
+        let red = matchadd('WhiteOnRed', target_pat, 101)
+        redraw
+        exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
+        call matchdelete(red)
+        redraw
+        exec 'sleep ' . float2nr(a:blinktime / (2*blinks) * 1000) . 'm'
+    endfor
+endfunction
+nnoremap <silent> n n:call HLNext(0.1)<CR>
+nnoremap <silent> N N:call HLNext(0.1)<CR>
+
+
 " Key Mappings {{{1
 
 set pastetoggle=<F2>
@@ -174,6 +195,7 @@ nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
 " Enter key turns off highlighting
 " See http://stackoverflow.com/a/662914/156060
 nnoremap <silent> <CR> :nohlsearch<CR><CR>
+
 
 " In normal mode use semicolon for colon and double-colon for what colon
 " normally does. This makes it much more convenient to enter command mode from
