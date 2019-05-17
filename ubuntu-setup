@@ -5,20 +5,20 @@ set -o nounset
 set -o pipefail
 
 isDebianPackageInstalled() {
-  dpkg-query -W -f='${Status}' $1 2>/dev/null | grep -q 'ok installed'
+  dpkg-query -W -f='${Status}' "$1" 2>/dev/null | grep -q 'ok installed'
 }
 
 installDebianPackage() {
-  if ! isDebianPackageInstalled $1
+  if ! isDebianPackageInstalled "$1"
   then
-    sudo apt -y install $1
+    sudo apt -y install "$1"
   fi
 }
 
 installNpmPackage() {
-  if ! which $1 > /dev/null
+  if ! which "$1" > /dev/null
   then
-    npm -g install $1
+    npm -g install "$1"
   fi
 }
 
