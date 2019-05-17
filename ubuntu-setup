@@ -34,11 +34,8 @@ python3 install.py --go-completer --ts-completer --java-completer --clang-comple
 installDebianPackage ruby-dev
 sudo snap install --classic go
 cd ~/.vim/bundle/Command-T/ruby/command-t/ext/command-t/
-if ! [[ -x ext.so ]]
-then
-  ruby extconf.rb
-  make
-fi
+ruby extconf.rb
+make
 
 # Syntastic: json
 installNpmPackage jsonlint
