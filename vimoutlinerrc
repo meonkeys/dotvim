@@ -1,0 +1,5 @@
+" see ~/.vim/bundle/vimoutliner/vimoutlinerrc
+
+let g:vo_modules_load = "checkbox:math"
+
+" vim:ft=vim
