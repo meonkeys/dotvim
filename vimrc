@@ -186,8 +186,6 @@ nmap <F6> :make<CR>
 nmap gf :split <cfile><CR>
 " throw in the date, ala 2004-09-26
 nmap <Leader>dt mz:r !date -I<CR>"xd$dd`z"xP<Esc>
-" spreadsheet-compatible date string
-nmap <Leader>ds a<Esc>:r !date +'\%D \%I:\%M \%p'<CR>kJ
 " Use K to grep word under cursor and open all matches in a quickfix window.
 " Requires Silver Searcher plugin ("ag", installed above).
 " see http://robots.thoughtbot.com/faster-grepping-in-vim
