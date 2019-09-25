@@ -113,7 +113,7 @@ set ttyscroll=3
 if version >= 703
     set undofile
 endif
-set visualbell
+set novisualbell
 set virtualedit=
 set whichwrap+=<,>
 set wildignore+=node_modules/**
