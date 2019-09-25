@@ -184,8 +184,8 @@ set pastetoggle=<F2>
 nmap <F6> :make<CR>
 " gf usually just opens the file in the same window
 nmap gf :split <cfile><CR>
-" throw in the date, ala [ Sun Sep 26 22:41:43 PDT 2004 ]
-nmap <Leader>dt a[<Esc>:r !date<CR>kJ$a ]<Esc>
+" throw in the date, ala 2004-09-26
+nmap <Leader>dt mz:r !date -I<CR>"xd$dd`z"xP<Esc>
 " spreadsheet-compatible date string
 nmap <Leader>ds a<Esc>:r !date +'\%D \%I:\%M \%p'<CR>kJ
 " Use K to grep word under cursor and open all matches in a quickfix window.
