@@ -50,16 +50,7 @@ installDebianPackage shellcheck
 installDebianPackage silversearcher-ag
 
 # Airline (needs special fonts)
-if ! [[ -r ~/.fonts/PowerlineSymbols.otf ]]
-then
-  mkdir -p ~/.fonts
-  cd ~/.fonts
-  wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
-  fc-cache -vf ~/.fonts/
-  mkdir -p ~/.config/fontconfig/conf.d
-  cd ~/.config/fontconfig/conf.d
-  wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-fi
+installDebianPackage fonts-powerline
 
 # Tern - http://ternjs.net
 cd ~/.vim/bundle/tern_for_vim
