@@ -545,7 +545,7 @@ function! <SID>RemoveFancyCharacters() range
   let typo["’"] = "'"
   let typo["—"] = '--'
   let typo["…"] = '...'
-  execute ':'.a:firstline.','.a:lastline.'s/'.join(keys(typo), '\|').'/\=typo[submatch(0)]/ge'
+  execute ':'.a:firstline.','.a:lastline.'s/'.join(keys(typo), '\|').'/\=typo[submatch(0)]/gce'
 endfunction
 
 " Plugin settings {{{1
