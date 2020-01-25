@@ -211,12 +211,12 @@ noremap ;; ;
 " 'set filetype=x' forces a filetype, 'setfiletype' only sets a filetype if
 " none was detected
 autocmd BufRead,BufNewFile *inputrc setfiletype readline
-autocmd BufNewFile,Bufread mig.cf setfiletype html
-autocmd BufNewFile,Bufread *.jad setfiletype java
-autocmd BufNewFile,Bufread *.jspf setfiletype jsp
+autocmd BufNewFile,BufRead mig.cf setfiletype html
+autocmd BufNewFile,BufRead *.jad setfiletype java
+autocmd BufNewFile,BufRead *.jspf setfiletype jsp
 " cause javaclassfile.vim ftplugin to be executed, which uses jad
 " to decompile and display on the fly
-autocmd BufNewFile,Bufread *.class setfiletype javaclassfile
+autocmd BufNewFile,BufRead *.class setfiletype javaclassfile
 " autocmd BufNewFile *.pl 0r ~/.vim/templates/newperlfile
 autocmd BufRead,BufNewFile Rakefile setfiletype ruby
 autocmd BufRead,BufNewFile *.rhtml setfiletype eruby
@@ -407,7 +407,7 @@ function s:ChangeLogSettings()
     let g:changelog_username = 'Adam Monsen <haircut@gmail.com>'
 endfunction
 
-autocmd BufNewFile,Bufread NEWS call <SID>NewsFileSettings()
+autocmd BufNewFile,BufRead NEWS call <SID>NewsFileSettings()
 function s:NewsFileSettings()
     set tw=72
 endfunction
@@ -432,7 +432,7 @@ function s:IrcLogSettings()
     set statusline=%{FindPriorDayInIrcLog()}
 endfunction
 
-autocmd BufNewFile,Bufread *akefile call <SID>MakefileSettings()
+autocmd BufNewFile,BufRead *akefile call <SID>MakefileSettings()
 function s:MakefileSettings()
     set noexpandtab " don't use spaces to indent
     set nosmarttab  " don't ever use spaces, not even at line beginnings
@@ -446,7 +446,7 @@ function s:SpecfileSettings()
 endfunction
 
 " Adapt to GRE word study lists
-autocmd BufNewFile,Bufread */gre_prep/*word*.txt call <SID>QuizDBSettings()
+autocmd BufNewFile,BufRead */gre_prep/*word*.txt call <SID>QuizDBSettings()
 function s:QuizDBSettings()
     set noexpandtab
     set spell spelllang=en_us
