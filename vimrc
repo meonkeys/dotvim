@@ -425,8 +425,9 @@ function FindPriorDayInIrcLog()
     return '(no date)'
 endfun
 
-autocmd BufNewFile,Bufread */.irssi/logs/* call <SID>IrcLogSettings()
+autocmd BufRead */irssi/logs/* call <SID>IrcLogSettings()
 function s:IrcLogSettings()
+    let w:airline_disabled = 1
     set laststatus=2
     set statusline=%{FindPriorDayInIrcLog()}
 endfunction
