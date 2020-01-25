@@ -177,6 +177,21 @@ endfunction
 nnoremap <silent> n n:call HLNext(0.1)<CR>
 nnoremap <silent> N N:call HLNext(0.1)<CR>
 
+" From https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
+" via https://github.com/nedbat/dot/blob/master/.vimrc#L722-L733 (thank you
+" nedbat in #vim on Freenode)
+command! -range=% ReplaceFancyCharacters :<line1>,<line2>call <SID>ReplaceFancyCharacters()
+function! <SID>ReplaceFancyCharacters() range
+  let typo = {}
+  let typo["“"] = '"'
+  let typo["”"] = '"'
+  let typo["‘"] = "'"
+  let typo["’"] = "'"
+  let typo["—"] = '--'
+  let typo["…"] = '...'
+  execute ':'.a:firstline.','.a:lastline.'s/'.join(keys(typo), '\|').'/\=typo[submatch(0)]/gce'
+endfunction
+
 
 " Key Mappings {{{1
 
@@ -532,21 +547,6 @@ endfunction
 autocmd FileType dockerfile call <SID>DockerfileSettings()
 function s:DockerfileSettings()
     match todo /FIXME\|TODO/
-endfunction
-
-" From https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
-" via https://github.com/nedbat/dot/blob/master/.vimrc#L722-L733 (thank you
-" nedbat in #vim on Freenode)
-command! -range=% ReplaceFancyCharacters :<line1>,<line2>call <SID>ReplaceFancyCharacters()
-function! <SID>ReplaceFancyCharacters() range
-  let typo = {}
-  let typo["“"] = '"'
-  let typo["”"] = '"'
-  let typo["‘"] = "'"
-  let typo["’"] = "'"
-  let typo["—"] = '--'
-  let typo["…"] = '...'
-  execute ':'.a:firstline.','.a:lastline.'s/'.join(keys(typo), '\|').'/\=typo[submatch(0)]/gce'
 endfunction
 
 " Plugin settings {{{1
