@@ -124,39 +124,6 @@ let g:netrw_list_hide='^\.[^.]\+'
 
 " Functions {{{1
 
-" F8 is my magic color switcher...
-" toggles syntax highlighting for light/dark backgrounds
-function s:Swapcolor()
-    if exists("g:syntax_on")
-        syntax off
-    else
-        " see eval.txt in the vim helpfiles...
-        " &background checks the background option
-        if     &background == 'light'
-            set background=dark
-        elseif &background == 'dark'
-            set background=light
-        endif
-        syntax on
-    endif
-endfunction
-
-" Bracketed paste mode
-
-if &term =~ 'xterm\|screen'
-    let &t_ti = &t_ti . "\e[?2004h"
-    let &t_te = "\e[?2004l" . &t_te
-    function XTermPasteBegin(ret)
-        set pastetoggle=<Esc>[201~
-        set paste
-        return a:ret
-    endfunction
-    map <expr> <Esc>[200~ XTermPasteBegin("i")
-    imap <expr> <Esc>[200~ XTermPasteBegin("")
-    cmap <Esc>[200~ <nop>
-    cmap <Esc>[201~ <nop>
-endif
-
 " Adapted from Damian Conway's /More Instantly Better Vim/ - OSCON 2013
 " ( https://youtu.be/aHm36-na4-4?t=437 )
 function! g:HLNext(blinktime)
